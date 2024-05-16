@@ -3,49 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Web-bee Intern</title>
   </head>
   <body>
-    <header class="header">
-      <img src="assets/back-icon.svg" alt="back-arrow icon" />
-      <b>User Pages </b>- Profile
+    <header class="header d-flex align-items-center w-100 gap-2">
+      <img src="assets/back-icon.svg" alt="back-arrow icon" class="mr-2" />
+      <b>User Pages</b>- Profile
     </header>
-    <nav class="nav-bar">
-      <a href="#" class="nav current">
+    <nav class="nav-bar w-100 d-flex">
+      <a href="#" class="nav current gap-2 d-flex align-items-center">
         <img src="assets/activity-icon.svg" alt="activity icon" />
         Activity
       </a>
-      <a href="map.html" class="nav">
+      <a href="map.html" class="nav gap-2 d-flex align-items-center">
         <img src="assets/map-icon.svg" alt="map icon" />
         Map
       </a>
-      <a href="timer.html" class="nav">
+      <a href="timer.html" class="nav gap-2 d-flex align-items-center">
         <img src="assets/time-icon.svg" alt="time icon" />
         Time
       </a>
     </nav>
-    <div class="main-wrapper">
-      <main class="main">
-        <article class="post-block">
-          <div class="post-image-wrapper">
-            <img
-              src="assets/photo-example.svg"
-              alt="morning sun"
-              class="post-image"
-            />
-          </div>
-          <div class="comment-title">
+    <div class="main-wrapper d-flex">
+      <main class="main flex-grow-1 d-flex flex-column">
+        <article class="post-block d-flex flex-column gap-3">
+          <img
+            src="assets/photo-example.svg"
+            alt="morning sun"
+            class="post-image img-fluid"
+          />
+          <div class="d-flex align-items-center gap-2">
             <img src="assets/comment-icon.svg" alt="comment icon" />
             <span><b>Jason Andersen</b> commented:</span>
           </div>
-          <div class="comment-text">
+          <div class="comment-text d-flex flex-column gap-3">
             Don’t sit and wait. Get out there, feel life. Touch the sun, and
             immerse in the sea. Keep love in your heart. A life without it is
             like a sunless garden when the flowers are dead. Because summer is
@@ -53,29 +51,33 @@
             and caresses the face.
             <div class="comment-author-time">– Jason, <i>10:30 am</i></div>
           </div>
-          <div class="post-icons">
-            <span class="post-icon"
+          <div class="post-icons d-flex">
+            <span class="d-flex align-items-center gap-2"
               ><img src="assets/views-icon.svg" alt="views icon" />432</span
             >
-            <span class="post-icon"
+            <span class="d-flex align-items-center gap-2"
               ><img src="assets/comment-icon.svg" alt="comment icon" />47</span
             >
           </div>
         </article>
-        <article class="another-post-block">
+        <article
+          class="another-post-block d-flex align-items-center justify-content-between"
+        >
           Sunset Sunset Sunset
-          <div class="drop-down-block">
-            <div class="time-block">
+          <div class="d-flex gap-3 align-items-center">
+            <div class="d-flex align-items-center gap-2">
               <img src="assets/time-icon.svg" alt="time icon" />
               53 minutes ago
             </div>
             <img src="assets/drop-down-icon.svg" alt="drop-down icon" />
           </div>
         </article>
-        <article class="another-post-block">
+        <article
+          class="another-post-block d-flex align-items-center justify-content-between"
+        >
           Morning of Siberia
-          <div class="drop-down-block">
-            <div class="time-block">
+          <div class="d-flex gap-3 align-items-center">
+            <div class="d-flex align-items-center gap-2">
               <img src="assets/time-icon.svg" alt="time icon" />
               56 minutes ago
             </div>
@@ -83,14 +85,16 @@
           </div>
         </article>
       </main>
-      <aside class="profile-column">
-        <article class="profile-card">
+      <aside class="profile-column d-flex flex-column">
+        <article
+          class="profile-card d-flex flex-column gap-3 align-items-center"
+        >
           <img
             src="assets/profile-photo.svg"
             alt="profile-photo"
-            class="profile-photo"
+            class="profile-photo img-fluid"
           />
-          <div class="profile-text">
+          <div class="text-center gap-2 d-flex flex-column">
             <div class="profile-title">Hanna Dorman</div>
             <div class="profile-subtitle">Frontend-developer</div>
           </div>

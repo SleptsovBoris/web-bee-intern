@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 :root {
   --bg-color: #f1f1f1;
   --bg2-color: #fafafa;
@@ -10,24 +12,20 @@
 
 body {
   margin: 0;
-  background-color: var(--bg-color);
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 16.41px;
-  font-style: normal;
   color: var(--black-color);
 }
 
 /*Header*/
 .header {
-  width: clamp(600px, 100%, 1440px);
   height: 64px;
-  display: flex;
-  align-items: center;
   font-size: 18px;
-  gap: 8px;
+  line-height: 21.09px;
   padding-inline: var(--padding-horizontal);
   background-color: var(--white-color);
   box-shadow: 0 1px 1px #0000001a;
@@ -35,156 +33,121 @@ body {
 
 /*NavBar*/
 .nav-bar {
-  display: flex;
-  width: clamp(600px, 100%, 1440px);
   height: 40px;
   padding-inline: var(--padding-horizontal);
   background-color: var(--bg2-color);
   box-shadow: 0 1px 1px #0000001a;
 }
 .nav {
-  width: 106px;
   padding-inline: 16px;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   color: var(--black-color);
 }
 .current {
   background-color: var(--bg-color);
 }
-/* .nav:hover {
-  background-color: var(--bg-color);
-} */
 
 /*main*/
 .main-wrapper {
-  display: flex;
-  flex-direction: row;
-  padding: 32px;
+  background-color: var(--bg-color);
+  padding: var(--padding-horizontal);
   gap: 32px;
 }
-.main {
-  width: clamp(200px, 100%, 1080px);
-  height: 848px;
-  display: flex;
-  flex-direction: column;
+.main,
+.post-icons,
+.profile-column {
   gap: 32px;
 }
 .post-block {
-  background-color: var(--white-color);
-  padding: 56px var(--padding-horizontal) 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 0 2px #0000001a;
-}
-.post-image-wrapper {
-  width: clamp(200px, 100%, 1016px);
-  height: 424px;
+  padding: 56px var(--padding-horizontal) var(--padding-horizontal);
 }
 .post-image {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-}
-.comment-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  object-fit: cover;
 }
 .comment-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   margin-left: 10px;
-  height: 64px;
+  position: relative;
 }
 .comment-text::before {
   content: "";
   position: absolute;
-  left: 64px;
+  left: -10px;
   width: 2px;
-  height: 63px;
+  height: clamp(63px, 100%, 200px);
   background-color: var(--grey-color);
 }
 .comment-author-time {
   color: var(--second-tx-color);
 }
-.post-icons {
-  display: flex;
-  gap: 32px;
-}
-.post-icon {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 .another-post-block {
-  display: flex;
-  background-color: var(--white-color);
-  height: 56px;
   padding: 16px var(--padding-horizontal);
   font-size: 16px;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  box-shadow: 0 0 2px #0000001a;
 }
-.drop-down-block {
-  display: flex;
-  gap: 16px;
-}
-.time-block {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+
+.post-block,
+.another-post-block,
+.profile-card,
+.profile-info {
+  background-color: var(--white-color);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /*Profile*/
-.profile-column {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
 .profile-card {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  background-color: var(--white-color);
   width: 264px;
-  height: 296px;
-  padding: 32px 50px;
-  box-shadow: 0 0 2px #0000001a;
+  padding: var(--padding-horizontal) 50px;
 }
 .profile-photo {
   width: 132px;
-  border-radius: 100px;
-}
-.profile-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  border-radius: 50%;
 }
 .profile-title {
-  display: flex;
-  justify-content: center;
   font-size: 18px;
 }
 .profile-subtitle {
-  display: flex;
-  justify-content: center;
   color: var(--second-tx-color);
 }
-
 .profile-info {
   width: 264px;
-  padding: 32px;
-  box-sizing: border-box;
+  padding: var(--padding-horizontal);
+}
+
+/*Yandex-Map*/
+.map-wrapper {
   background-color: var(--white-color);
-  box-shadow: 0 0 2px #0000001a;
+  position: relative;
+}
+.map-header {
+  padding-inline: var(--padding-horizontal);
+  height: 56px;
+}
+.map-title {
+  font-size: 16px;
+}
+.map-icons {
+  width: 88px;
+  height: 24px;
+}
+.map {
+  height: 480px;
+  padding: 0 var(--padding-horizontal) var(--padding-horizontal);
+}
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const html = await response.text();
       contentDiv.innerHTML = html;
+      updateActiveLink(page);
 
       if (page === "map.html") {
         initMap();
@@ -21,6 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading content:", error);
       contentDiv.innerHTML = "<p>Error loading page. Please try again.</p>";
     }
+  }
+
+  function updateActiveLink(page) {
+    const links = document.querySelectorAll("[data-link]");
+    links.forEach((link) => {
+      if (link.getAttribute("data-link") + ".html" === page) {
+        link.classList.add("current");
+      } else {
+        link.classList.remove("current");
+      }
+    });
   }
 
   function initMap() {

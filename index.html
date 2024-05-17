@@ -18,106 +18,30 @@
       <b>User Pages</b>- Profile
     </header>
     <nav class="nav-bar w-100 d-flex">
-      <a href="#" class="nav current gap-2 d-flex align-items-center">
+      <a
+        href="#"
+        data-link="profile"
+        class="nav gap-2 d-flex align-items-center"
+      >
         <img src="assets/activity-icon.svg" alt="activity icon" />
         Activity
       </a>
-      <a href="map.html" class="nav gap-2 d-flex align-items-center">
+      <a href="#" data-link="map" class="nav gap-2 d-flex align-items-center">
         <img src="assets/map-icon.svg" alt="map icon" />
         Map
       </a>
-      <a href="timer.html" class="nav gap-2 d-flex align-items-center">
+      <a href="#" data-link="timer" class="nav gap-2 d-flex align-items-center">
         <img src="assets/time-icon.svg" alt="time icon" />
         Time
       </a>
     </nav>
-    <div class="main-wrapper d-flex">
-      <main class="main flex-grow-1 d-flex flex-column">
-        <article class="post-block d-flex flex-column gap-3">
-          <img
-            src="assets/photo-example.svg"
-            alt="morning sun"
-            class="post-image img-fluid"
-          />
-          <div class="d-flex align-items-center gap-2">
-            <img src="assets/comment-icon.svg" alt="comment icon" />
-            <span><b>Jason Andersen</b> commented:</span>
-          </div>
-          <div class="comment-text d-flex flex-column gap-3">
-            Don’t sit and wait. Get out there, feel life. Touch the sun, and
-            immerse in the sea. Keep love in your heart. A life without it is
-            like a sunless garden when the flowers are dead. Because summer is
-            passion, memories, light breeze, the sun that appears on the skin
-            and caresses the face.
-            <div class="comment-author-time">– Jason, <i>10:30 am</i></div>
-          </div>
-          <div class="post-icons d-flex">
-            <span class="d-flex align-items-center gap-2"
-              ><img src="assets/views-icon.svg" alt="views icon" />432</span
-            >
-            <span class="d-flex align-items-center gap-2"
-              ><img src="assets/comment-icon.svg" alt="comment icon" />47</span
-            >
-          </div>
-        </article>
-        <article
-          class="another-post-block d-flex align-items-center justify-content-between"
-        >
-          Sunset Sunset Sunset
-          <div class="d-flex gap-3 align-items-center">
-            <div class="d-flex align-items-center gap-2">
-              <img src="assets/time-icon.svg" alt="time icon" />
-              53 minutes ago
-            </div>
-            <img src="assets/drop-down-icon.svg" alt="drop-down icon" />
-          </div>
-        </article>
-        <article
-          class="another-post-block d-flex align-items-center justify-content-between"
-        >
-          Morning of Siberia
-          <div class="d-flex gap-3 align-items-center">
-            <div class="d-flex align-items-center gap-2">
-              <img src="assets/time-icon.svg" alt="time icon" />
-              56 minutes ago
-            </div>
-            <img src="assets/drop-down-icon.svg" alt="drop-down icon" />
-          </div>
-        </article>
-      </main>
-      <aside class="profile-column d-flex flex-column">
-        <article
-          class="profile-card d-flex flex-column gap-3 align-items-center"
-        >
-          <img
-            src="assets/profile-photo.svg"
-            alt="profile-photo"
-            class="profile-photo img-fluid"
-          />
-          <div class="text-center gap-2 d-flex flex-column">
-            <div class="profile-title">Hanna Dorman</div>
-            <div class="profile-subtitle">Frontend-developer</div>
-          </div>
-          <img
-            src="assets/social-networks-icon.svg"
-            alt="social-networks"
-            class="profile-social-networks"
-          />
-        </article>
-        <article class="profile-info">
-          <b>Телефон</b>
-          <p>+79270499085</p>
-          <b>Навыки:</b>
-          <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Javascript</li>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>Next</li>
-          </ul>
-        </article>
-      </aside>
-    </div>
+    <div id="content"></div>
+
+    <!-- Yandex Maps API -->
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=c44df0a4-9884-4e88-9236-f09e8d5ef291&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>

@@ -18,6 +18,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 16.41px;
+  background-color: var(--bg-color);
   color: var(--black-color);
 }
 
@@ -149,5 +150,15 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.timer {
+  padding: var(--padding-horizontal);
+}
+
+@media (max-width: 550px) {
+  .main-wrapper {
+    flex-direction: column-reverse;
   }
 }

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --bg-color: #f1f1f1;
+  --bg2-color: #fafafa;
+  --white-color: #ffffff;
+  --grey-color: #d3d8de;
+  --black-color: #505050;
+  --second-tx-color: #8f8f8f;
+  --padding-horizontal: 32px;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  background-color: var(--bg-color);
+  color: var(--black-color);
+}
+
+/*Header*/
+.header {
+  height: 64px;
+  font-size: 18px;
+  line-height: 21.09px;
+  padding-inline: var(--padding-horizontal);
+  background-color: var(--white-color);
+  box-shadow: 0 1px 1px #0000001a;
+}
+
+/*NavBar*/
+.nav-bar {
+  height: 40px;
+  padding-inline: var(--padding-horizontal);
+  background-color: var(--bg2-color);
+  box-shadow: 0 1px 1px #0000001a;
+}
+.nav {
+  padding-inline: 16px;
+  text-decoration: none;
+  color: var(--black-color);
+}
+.current {
+  background-color: var(--bg-color);
+}
+
+/*main*/
+.main-wrapper {
+  background-color: var(--bg-color);
+  padding: var(--padding-horizontal);
+  gap: 32px;
+}
+.main,
+.post-icons,
+.profile-column {
+  gap: 32px;
+}
+.post-block {
+  padding: 56px var(--padding-horizontal) var(--padding-horizontal);
+}
+.post-image {
+  object-fit: cover;
+}
+.comment-text {
+  margin-left: 10px;
+  position: relative;
+}
+.comment-text::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 2px;
+  height: clamp(63px, 100%, 200px);
+  background-color: var(--grey-color);
+}
+.comment-author-time {
+  color: var(--second-tx-color);
+}
+.another-post-block {
+  padding: 16px var(--padding-horizontal);
+  font-size: 16px;
+}
+
+.post-block,
+.another-post-block,
+.profile-card,
+.profile-info {
+  background-color: var(--white-color);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/*Profile*/
+.profile-card {
+  width: 264px;
+  padding: var(--padding-horizontal) 50px;
+}
+.profile-photo {
+  width: 132px;
+  border-radius: 50%;
+}
+.profile-title {
+  font-size: 18px;
+}
+.profile-subtitle {
+  color: var(--second-tx-color);
+}
+.profile-info {
+  width: 264px;
+  padding: var(--padding-horizontal);
+}
+
+/*Yandex-Map*/
+.map-wrapper {
+  background-color: var(--white-color);
+  position: relative;
+}
+.map-header {
+  padding-inline: var(--padding-horizontal);
+  height: 56px;
+}
+.map-title {
+  font-size: 16px;
+}
+.map-icons {
+  width: 88px;
+  height: 24px;
+}
+.map {
+  height: 480px;
+  padding: 0 var(--padding-horizontal) var(--padding-horizontal);
+}
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.timer {
+  padding: var(--padding-horizontal);
+}
+
+@media (max-width: 550px) {
+  .main-wrapper {
+    flex-direction: column-reverse;
+  }
+}
